@@ -1,7 +1,7 @@
 const insightsData = [
   {
     id: 1,
-    image: "",
+    image: "./assets/images/conference.webp",
     date: "",
     type: "",
     title: "Insight 1",
