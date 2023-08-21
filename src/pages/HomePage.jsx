@@ -1,13 +1,14 @@
 import Button from "../components/ui/Button";
+import ServicesCard from "../components/ui/ServicesCard";
 
 export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="mb-[-100vh]">
+      <section className="mb-[-100vh] ">
         <div className="sticky top-0 ">
-          <div className="relative overflow-hidden">
-            <div className="absolute bottom-0  z-10 px-8 py-4 font-satoshi text-white">
+          <div className="relative overflow-hidden px-8 ">
+            <div className="absolute bottom-20  z-10 px-8 py-4 font-satoshi text-white">
               <div className=" pl-4 text-lg font-semibold">
                 <p className=" tracking-wider mix-blend-exclusion">
                   A digital-first creative agency
@@ -19,7 +20,7 @@ export default function HomePage() {
               </h1>
             </div>
             <video
-              className="-z-10 h-screen w-full object-cover brightness-75"
+              className="-z-10 h-screen w-full rounded-md object-cover brightness-75"
               autoPlay={true}
               muted
               loop={true}
@@ -73,7 +74,7 @@ export default function HomePage() {
           <div className="grid grid-cols-12 gap-x-16 ">
             <div className="col-span-6 text-bright-brown">
               <p className=" text-base uppercase tracking-wider">— about us </p>
-              <h2 className=" max-w-lg text-4xl  font-semibold">
+              <h2 className=" max-w-lg text-4xl  font-bold">
                 We believe in the power of simplicity and impeccable design
               </h2>
             </div>
@@ -99,63 +100,44 @@ export default function HomePage() {
               <p className=" text-base uppercase tracking-wider">
                 — services we offer{" "}
               </p>
-              <h2 className=" text-4xl  font-semibold">
+              <h2 className=" text-4xl  font-bold">
                 From crafting comprehensive digital presence to driving your
                 success in the digital landscape.
               </h2>
             </div>
             <Button>View our work</Button>
           </div>
-          {/* TODO: Extract this into a separate ui component */}
+          {/* TODO: Try to make this into compound components*/}
           <div className="mt-16 grid grid-cols-9 gap-x-10">
-            <div className="col-span-3">
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src="/src/assets/images/branding.webp"
-                  className="h-full w-full object-cover"
-                  alt=" "
-                />
-              </div>
-              <h3 className="font-semibold text-bright-brown text-2xl">Branding & Identity</h3>
-              <p>
-                We craft powerful brand identities that leave a lasting
+            <ServicesCard
+              img="/src/assets/images/branding.webp"
+              alt="branding"
+              title="Branding & Identity"
+              description="We craft powerful brand identities that leave a lasting
                 impression. From logo design to brand strategy, we help
                 businesses establish a cohesive and memorable presence that
-                stands out in today&apos;s competitive landscape.
-              </p>
-            </div>
-            <div className="col-span-3">
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src="/src/assets/images/ux.webp"
-                  className="h-full w-full object-cover"
-                  alt=" "
-                />
-              </div>
-              <h3 className="font-semibold text-bright-brown text-2xl">User Experience (UX) </h3>
-              <p>
-                Our UX design services prioritize intuitive and delightful user
-                experiences. Through wireframing, prototyping, and user testing,
-                we create interactions that are engaging and aligned with the
-                needs of your target audience.
-              </p>
-            </div>
-            <div className="col-span-3">
-              <div className="aspect-square   overflow-hidden">
-                <img
-                  src="/src/assets/images/webdevelopment.webp"
-                  className="h-full w-full object-cover"
-                  alt=" "
-                />
-              </div>
-              <h3 className="font-semibold text-bright-brown text-2xl">Web Development</h3>
-              <p>
-                We create visually stunning and functional websites that engage
-                visitors and drive conversions. Our team leverages the latest
-                technologies to deliver responsive and scalable solutions
-                tailored to your needs.
-              </p>
-            </div>
+                stands out in today's competitive landscape."
+            />
+
+            <ServicesCard
+              img="/src/assets/images/ux.webp"
+              alt="ux"
+              title="User Experience (UX)"
+              description="Our UX design services prioritize intuitive and delightful user
+              experiences. Through wireframing, prototyping, and user testing,
+              we create interactions that are engaging and aligned with the
+              needs of your target audience."
+            />
+
+            <ServicesCard
+              img="/src/assets/images/webdevelopment.webp"
+              alt="web development"
+              title="Web Development"
+              description="We create visually stunning and functional websites that engage
+              visitors and drive conversions. Our team leverages the latest
+              technologies to deliver responsive and scalable solutions
+              tailored to your needs."
+            />
           </div>
         </section>
       </div>
