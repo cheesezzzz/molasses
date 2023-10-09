@@ -1,17 +1,18 @@
 import Button from "../components/ui/Button";
 import ServicesCard from "../components/ui/ServicesCard";
 
+
 export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
       <section className="mb-[-100vh] ">
         <div className="sticky top-0 ">
-          <div className="relative overflow-hidden px-8 ">
-            <div className="absolute bottom-20  z-10 px-8 py-4 font-satoshi text-white">
-              <div className=" pl-4 text-lg font-semibold">
-                <p className=" tracking-wider mix-blend-exclusion">
-                  A digital-first creative agency
+          <div className="relative overflow-hidden">
+            <div className="absolute bottom-1  z-10 section-padding py-4 font-satoshi text-white">
+              <div className=" pl-4 text-4xl font-regular">
+                <p className="mix-blend-exclusion">
+                A creative web & branding agency
                 </p>
               </div>
               <h1 className="flex flex-col font-display text-9xl font-extrabold uppercase">
@@ -70,7 +71,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mt-40 px-8">
+        <section className="mt-40 section-padding">
           <div className="grid grid-cols-12 gap-x-16 ">
             <div className="col-span-6 text-bright-brown">
               <p className=" text-base uppercase tracking-wider">— about us </p>
@@ -94,7 +95,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mt-40 px-8">
+        <section className="mt-40 section-padding">
           <div className="flex items-center justify-between">
             <div className="max-w-2xl text-bright-brown">
               <p className=" text-base uppercase tracking-wider">
@@ -140,6 +141,9 @@ export default function HomePage() {
             />
           </div>
         </section>
+        <div className="w-full max-w-xs mx-auto mt-20">
+     
+    </div>
       </div>
     </>
   );

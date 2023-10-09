@@ -5,7 +5,7 @@ export default function Button({ children }) {
         <span className="absolute bg-brown bottom-0 w-full h-0 group-hover:h-full duration-200 ease-in-out">
 
         </span>
-        <span className="z-50 group-hover:text-cream duration-200 ease-in-out">
+        <span className="z-20 group-hover:text-cream duration-200 ease-in-out">
           {children}
         </span>
         

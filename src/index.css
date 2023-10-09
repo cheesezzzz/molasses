@@ -14,3 +14,9 @@
 * {
   /* border: 1px solid red */
 }
+
+@layer utilities {
+  .section-padding {
+    @apply px-[2%]
+  }
+}

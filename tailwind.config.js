@@ -7,7 +7,7 @@ export default {
   theme: {
     colors: {
       'white': '#FFFFFF',
-      'black': '#000',
+      'black': '#181818',
       'dark-gray': '#A9A9A9',
       'light-gray': '#E7E7E7',
       'cream': '#FAF2EB',
@@ -20,7 +20,7 @@ export default {
       'satoshi': ['Satoshi-Variable', 'sans']
     },
     extend: {
-      
+    
     },
   },
   plugins: [],
