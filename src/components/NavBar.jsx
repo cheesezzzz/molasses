@@ -114,7 +114,7 @@ export default function NavBar() {
         </div>
       </header>
 
-      <AnimatePresence mode="wait" >{menuOpen && <Menu toggleMenu={toggleMenu} />}</AnimatePresence>
+      <AnimatePresence mode="wait" >{menuOpen && <Menu  toggleMenu={toggleMenu} />}</AnimatePresence>
     </div>
   );
 }
