@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { opacity } from "../utils/opacity";
+import { opacity } from "../../utils/opacity";
 
 const menuAnimation = {
   initial: {
@@ -84,20 +84,25 @@ export default function Menu({ toggleMenu }) {
         exit="exit"
         className="backdrop-blur-4xl relative z-20 m-2 max-w-xl rounded-md bg-black"
       >
-        <nav className="flex h-full flex-col justify-center gap-y-5 px-20 text-6xl font-bold text-cream">
+        <nav className="flex h-full w-fit flex-col justify-center gap-y-5 px-20 text-6xl font-bold text-cream">
           {links.map((link, index) => {
             return (
-              <motion.a
-                custom={index}
-                variants={menuLinksAnim}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                key={index}
-                href={link.href}
-              >
-                {link.label}
-              </motion.a>
+              <div key={index} className="flex items-center gap-x-4 group cursor-pointer">
+                <span className="inline-block rounded-full w-3 h-3 bg-cream opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all">
+
+                </span>
+                <motion.a
+                  className="w-fit"
+                  custom={index}
+                  variants={menuLinksAnim}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  href={link.href}
+                >
+                  {link.label}
+                </motion.a>
+              </div>
             );
           })}
         </nav>

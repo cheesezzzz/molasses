@@ -5,7 +5,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { useState } from "react";
-import { opacity } from "../utils/opacity";
+import { opacity } from "../../utils/opacity";
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
 

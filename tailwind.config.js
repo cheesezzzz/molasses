@@ -20,7 +20,7 @@ export default {
       'satoshi': ['Satoshi-Variable', 'sans']
     },
     extend: {
-    
+      
     },
   },
   plugins: [],

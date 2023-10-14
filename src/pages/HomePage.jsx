@@ -1,5 +1,5 @@
-import Button from "../components/ui/Button";
-import ServicesCard from "../components/ui/ServicesCard";
+import Button from "../components/Buttons/Button";
+import ServicesCard from "../components/Cards/ServicesCard";
 
 
 export default function HomePage() {
