@@ -5,7 +5,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { useState } from "react";
-import { opacity } from "../../utils/opacity";
+import { opacity } from "../../../utils/opacity";
 import { Link } from "react-router-dom";
 import Menu from "./Menu";
 
@@ -46,7 +46,7 @@ export default function NavBar() {
   return (
     <div>
       <header className=" fixed left-1/2 top-2 z-50 w-full -translate-x-1/2 rounded-xl ">
-        <div className=" section-padding w-full py-3 ">
+        <div className=" px-[5%] md:px-[2%] w-full py-3 ">
           {/* Handling the navBar change logic */}
           <motion.nav
             variants={navVariants}
@@ -57,12 +57,12 @@ export default function NavBar() {
             {/* menu nav button */}
             <button
               onClick={toggleMenu}
-              className="bg-accent font-denton group relative  z-[60] flex h-14 w-14 items-center justify-center justify-self-start overflow-hidden rounded-full bg-cream px-5"
+              className="bg-accent font-denton group relative  z-[60] flex h-14 w-14 items-center justify-center justify-self-start overflow-hidden rounded-full bg-cream px-5 text-sm"
             >
               <motion.span
                 variants={opacity}
                 animate={!menuOpen ? "open" : "closed"}
-                className=" absolute h-fit text-sm"
+                className=" absolute h-fit "
               >
                 <span className="relative flex flex-col items-center justify-center">
                   <span className="absolute flex h-20 w-20 items-center justify-center bg-cream font-medium text-brown transition-all duration-500 ease-in-out group-hover:-translate-y-2 group-hover:opacity-0">
@@ -76,7 +76,7 @@ export default function NavBar() {
               <motion.span
                 variants={opacity}
                 animate={menuOpen ? "open" : "closed"}
-                className=" absolute h-fit text-sm opacity-0 "
+                className=" absolute h-fit opacity-0 "
               >
                 <span className="relative flex flex-col items-center justify-center">
                   <span className="absolute flex h-20 w-20 items-center justify-center bg-cream text-black transition-all duration-500 ease-in-out group-hover:-translate-y-2 group-hover:opacity-0">
@@ -90,14 +90,14 @@ export default function NavBar() {
             </button>
 
             {/* LOGO LINK */}
-            <div className="flex w-full items-start justify-center font-display text-4xl font-black">
+            <div className="flex w-full items-start justify-center font-display text-xl font-black">
               <Link to="/" href="">
                 CM.
               </Link>
             </div>
 
             {/* CTA */}
-            <div className="justify-self-end">
+            <div className="justify-self-end text-base">
               <a
                 className="font-denton group relative flex flex-col rounded-full bg-cream px-8 py-3 text-black"
                 href=""

@@ -5,8 +5,8 @@ export default function ServicesCard({ img, alt, title, description }) {
         <img src={img} className="h-full w-full object-cover" alt={alt} />
       </div>
       <div className="space-y-2">
-        <h3 className="text-2xl font-semibold text-bright-brown">{title}</h3>
-        <p>{description}</p>
+        <h3 className="text-lg font-black text-bright-brown">{title}</h3>
+        <p className="text-brown font-medium text-base">{description}</p>
       </div>
     </div>
   );

@@ -1,43 +1,19 @@
-import Button from "../components/Buttons/Button";
-import ServicesCard from "../components/Cards/ServicesCard";
-
+import Button from "../components/UI/Buttons/Button";
+import ServicesCard from "../components/UI/Cards/ServicesCard";
+import Heading2 from "../components/UI/Headings/SectionHeading";
+import Hero from "../components/Homepage/Hero";
 
 export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="mb-[-100vh] ">
-        <div className="sticky top-0 ">
-          <div className="relative overflow-hidden">
-            <div className="absolute bottom-1  z-10 section-padding py-4 font-satoshi text-white">
-              <div className=" pl-4 text-4xl font-regular">
-                <p className="mix-blend-exclusion">
-                A creative web & branding agency
-                </p>
-              </div>
-              <h1 className="flex flex-col font-display text-9xl font-extrabold uppercase">
-                <span>Center</span>
-                <span>Molasses</span>
-              </h1>
-            </div>
-            <video
-              className="-z-10 h-screen w-full rounded-md object-cover brightness-75"
-              autoPlay={true}
-              muted
-              loop={true}
-            >
-              <source src="/src/assets/videos/hero1.webm" type="video/webm" />
-            </video>
-          </div>
-        </div>
-        <div className="h-screen"></div>
-      </section>
+      <Hero />
 
       {/* Sticky wrapper */}
       <div className=" relative w-full overflow-hidden rounded-2xl bg-cream">
         <section>
           <div className="relative flex h-screen w-full items-center justify-center overflow-hidden">
-            <h2 className="max-w-lg px-10 text-center font-satoshi text-5xl font-extrabold text-bright-brown">
+            <h2 className="max-w-lg px-10 text-center font-satoshi text-3xl font-extrabold text-bright-brown">
               we are a dedicated team that makes your brand stand out.
             </h2>
             <img
@@ -71,41 +47,35 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mt-40 section-padding">
+        <section className="section-padding">
           <div className="grid grid-cols-12 gap-x-16 ">
-            <div className="col-span-6 text-bright-brown">
-              <p className=" text-base uppercase tracking-wider">— about us </p>
-              <h2 className=" max-w-lg text-4xl  font-bold">
-                We believe in the power of simplicity and impeccable design
-              </h2>
-            </div>
-            <div className="col-span-3 text-brown">
+            {/* Extract this heading 2 as a component */}
+            <Heading2
+              tag="about us"
+              title="We believe in the power of simplicity and impeccable design"
+            />
+            <p className="col-span-3 text-base font-medium text-brown">
               Our mission is to create remarkable digital experiences that
               inspire and resonate with our clients and their audiences. With a
               relentless pursuit of excellence, we combine creativity,
               innovation, and technical expertise to deliver tailored solutions
               that drive tangible results.{" "}
-            </div>
-            <div className="col-span-3 text-brown">
+            </p>
+            <p className="col-span-3 text-base font-medium text-brown">
               We are dedicated to transforming ideas into impactful realities,
               leaving a lasting impression in the digital landscape. Trust us to
               bring your vision to life with our passion for minimalistic design
               and uncompromising attention to detail.
-            </div>
+            </p>
           </div>
         </section>
 
-        <section className="mt-40 section-padding">
+        <section className="section-padding">
           <div className="flex items-center justify-between">
-            <div className="max-w-2xl text-bright-brown">
-              <p className=" text-base uppercase tracking-wider">
-                — services we offer{" "}
-              </p>
-              <h2 className=" text-4xl  font-bold">
-                From crafting comprehensive digital presence to driving your
-                success in the digital landscape.
-              </h2>
-            </div>
+            <Heading2
+              tag="Services we offer"
+              title="From crafting digital presence to driving your success in the digital landscape."
+            />
             <Button>View our work</Button>
           </div>
           {/* TODO: Try to make this into compound components*/}
@@ -141,10 +111,17 @@ export default function HomePage() {
             />
           </div>
         </section>
-        <div className="w-full max-w-xs mx-auto mt-20">
-     
-    </div>
       </div>
+      <section className="section-padding flex items-center justify-between">
+        <Heading2
+          title="We understand your needs so you can leave your mark and stay ahead of the game"
+          tag="our projects"
+          tagStyle="text-cream"
+          titleStyle="text-light-gray "
+          lineStyle="bg-cream"
+        />
+        <Button>See more projects</Button>
+      </section>
     </>
   );
 }

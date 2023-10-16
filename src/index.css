@@ -1,22 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
-@font-face {
-  font-family: "Satoshi-Variable";
-  src: url("src/assets/fonts/Satoshi-Variable.ttf") format("truetype");
-  font-weight: 300 900;
-  font-display: swap;
-  font-style: normal;
-}
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-  /* border: 1px solid red */
+
+@layer base {
+  * {
+    /* border: 1px solid red */
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("src/assets/fonts/Satoshi-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("src/assets/fonts/Satoshi-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("src/assets/fonts/Satoshi-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    src: url("src/assets/fonts/Satoshi-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
 }
+
 
 @layer utilities {
   .section-padding {
-    @apply px-[2%]
+    @apply px-[5%] md:px-[2%] mt-10 md:mt-[8%]
   }
 }

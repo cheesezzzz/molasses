@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { opacity } from "../../utils/opacity";
+import { opacity } from "../../../utils/opacity";
 
 const menuAnimation = {
   initial: {
@@ -75,22 +75,34 @@ export default function Menu({ toggleMenu }) {
       initial="opacity"
       animate="open"
       exit="closed"
-      className="fixed z-50 flex h-screen w-screen bg-black  bg-opacity-20 backdrop-blur"
+      className="fixed z-50 flex h-screen w-screen  bg-black bg-opacity-20 backdrop-blur "
     >
       <motion.div
         variants={menuAnimation}
         initial="initial"
         animate="animate"
         exit="exit"
-        className="backdrop-blur-4xl relative z-20 m-2 max-w-xl rounded-md bg-black"
+        className="backdrop-blur-4xl relative z-20 m-2 flex max-w-xl flex-col justify-between rounded-md bg-black py-10 overflow-hidden"
       >
-        <nav className="flex h-full w-fit flex-col justify-center gap-y-5 px-20 text-6xl font-bold text-cream">
+        <svg
+          className=" absolute -right-2 -top-0 h-72 w-60 bg-gradient-to-tr from-bright-brown to-cream blur-[10rem]"
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M31.8,-39C46.2,-33.3,66.3,-30.7,76.5,-20C86.6,-9.3,86.6,9.4,78.4,22.6C70.1,35.7,53.5,43.3,39.1,53.8C24.6,64.2,12.3,77.5,-1.6,79.7C-15.5,81.9,-31,73,-42.2,61.5C-53.5,50,-60.4,35.9,-64.8,21.3C-69.2,6.7,-71.1,-8.5,-65.5,-20C-60,-31.5,-47.1,-39.3,-34.9,-45.7C-22.8,-52.2,-11.4,-57.4,-1.4,-55.5C8.7,-53.6,17.4,-44.7,31.8,-39Z"
+            transform="translate(100 100)"
+          />
+        </svg>
+
+        <nav className="flex flex-col justify-center gap-y-4 px-14 pt-40 text-4xl font-bold text-cream">
           {links.map((link, index) => {
             return (
-              <div key={index} className="flex items-center gap-x-4 group cursor-pointer">
-                <span className="inline-block rounded-full w-3 h-3 bg-cream opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all">
-
-                </span>
+              <div
+                key={index}
+                className="group flex w-fit cursor-pointer items-center gap-x-4"
+              >
+                <span className="invisible inline-block h-3 w-3 rounded-full bg-cream opacity-0 transition-all group-hover:visible group-hover:opacity-100"></span>
                 <motion.a
                   className="w-fit"
                   custom={index}
@@ -106,25 +118,23 @@ export default function Menu({ toggleMenu }) {
             );
           })}
         </nav>
+        <ul className="flex justify-end gap-x-8 px-14 text-cream">
+          <li>
+            <a href="">Linkedin</a>
+          </li>
+          <li>
+            <a href="">YouTube</a>
+          </li>
+          <li>
+            <a href="">Instagram</a>
+          </li>
+        </ul>
+
         <button
           onClick={toggleMenu}
-          className="absolute right-5 top-5 rounded-full bg-cream px-7 py-7"
+          className="group absolute right-6 top-6 rounded-full bg-cream font-medium text-sm h-14 w-14 text-brown"
         >
-          <span>
-            <motion.span
-              variants={opacity}
-              className=" absolute h-fit overflow-hidden text-sm opacity-0"
-            >
-              <span className="relative flex flex-col items-center justify-center">
-                <span className="absolute flex h-20 w-20 items-center justify-center bg-cream text-black transition-all duration-500 ease-in-out group-hover:-translate-y-2 group-hover:opacity-0">
-                  close
-                </span>
-                <span className="ease-[cubic-bezier(0, 0.55, 0.45, 1)] absolute flex h-20 w-20 translate-y-20 items-center justify-center rounded-full bg-brown transition-all duration-[400ms] group-hover:translate-y-0 group-hover:opacity-100">
-                  close
-                </span>
-              </span>
-            </motion.span>
-          </span>
+          close
         </button>
       </motion.div>
     </motion.div>
