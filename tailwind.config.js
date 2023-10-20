@@ -17,7 +17,8 @@ export default {
     },
     fontFamily: {
       'display': ['Unbounded', 'cursive'],
-      'satoshi': ['Satoshi', 'sans-serif']
+      'satoshi': ['Satoshi', 'sans-serif'],
+      
     },
     fontSize: {
       'display': ['clamp(3.5rem, 10vw, 14rem)', {lineHeight: '100%'}],
