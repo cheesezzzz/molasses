@@ -1,9 +1,18 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef } from "react";
 
 export default function Hero() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
   return (
-    <section className="mb-[-100vh] ">
-      <div className="sticky top-0 ">
+    <section ref={ref} className="mb-[-100vh] ">
+      <motion.div style={{ y, opacity }} className="sticky top-0 ">
         <div className="relative overflow-hidden">
           <div className="section-padding absolute  bottom-1 z-10 py-4 font-satoshi text-white">
             <div className=" font-medium pl-1 text-xl">
@@ -17,7 +26,7 @@ export default function Hero() {
             </h1>
           </div>
           <video
-            className="-z-10 h-screen w-full rounded-md object-cover brightness-75"
+            className="-z-10 h-screen w-full rounded-md object-cover brightness-75 "
             autoPlay={true}
             muted
             loop={true}
@@ -25,7 +34,7 @@ export default function Hero() {
             <source src="/src/assets/videos/hero1.webm" type="video/webm" />
           </video>
         </div>
-      </div>
+      </motion.div>
       <div className="h-screen"></div>
     </section>
   );

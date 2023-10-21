@@ -47,6 +47,6 @@
 
 @layer utilities {
   .section-padding {
-    @apply px-[5%] md:px-[2%] pt-10 md:pt-[8%]
+    @apply px-[5%] md:px-[3%] pt-10 md:pt-[8%]
   }
 }

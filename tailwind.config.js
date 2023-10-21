@@ -26,7 +26,7 @@ export default {
       '4xl': ['clamp(3.5rem, 5vw, 3.5rem)', {lineHeight: '115%'}],
       '3xl': ['3.05rem', {lineHeight: '115%'}],
       '2xl': ['clamp(1.95rem, 2.5vw, 3.05rem)', {lineHeight: '115%'}],
-      'xl': ['clamp(1.55rem, 2.5vw, 2.45rem)', {lineHeight: '115%'}],
+      'xl': ['clamp(1.55rem, 2vw, 2.45rem)', {lineHeight: '115%'}],
       'lg': ['1.55rem'],
       'md': ['1.25rem'],
       'base': ['clamp(1rem, 1vw, 1.25rem)', {lineHeight: '150%'}],

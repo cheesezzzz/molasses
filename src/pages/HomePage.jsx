@@ -1,6 +1,8 @@
 import Button from "../components/UI/Buttons/Button";
 import ServicesCard from "../components/UI/Cards/ServicesCard";
+import ProjectsCard from "../components/UI/Cards/ProjectsCard";
 import Heading2 from "../components/UI/Headings/SectionHeading";
+import InsightsCardHome from "../components/UI/Cards/InsightsCardsHome";
 import Hero from "../components/Homepage/Hero";
 
 export default function HomePage() {
@@ -70,16 +72,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section-padding">
-          <div className="flex items-center justify-between">
+        <section className="section-padding grid grid-cols-1 lg:grid-cols-6">
+          <div className="col-span-2 flex flex-row lg:flex-col items-center lg:items-start gap-y-12">
             <Heading2
-              tag="Services we offer"
+              tag="Services"
               title="From crafting digital presence to driving your success in the digital landscape."
             />
             <Button>View our work</Button>
           </div>
-          {/* TODO: Try to make this into compound components*/}
-          <div className="mt-16 grid grid-cols-9 gap-x-10">
+          <div className="mt-16 lg:mt-0 grid grid-cols-9 gap-x-10 col-span-4">
             <ServicesCard
               img="/src/assets/images/branding.webp"
               alt="branding"
@@ -112,15 +113,50 @@ export default function HomePage() {
           </div>
         </section>
       </div>
-      <section className="section-padding flex items-center justify-between">
-        <Heading2
-          title="We understand your needs so you can leave your mark and stay ahead of the game"
-          tag="our projects"
-          tagStyle="text-cream"
-          titleStyle="text-light-gray "
-          lineStyle="bg-cream"
-        />
-        <Button>See more projects</Button>
+      <section className="section-padding ">
+        <div className="flex items-center justify-between">
+          <Heading2
+            title="We understand your needs so you can leave your mark and stay ahead of the game"
+            tag="our projects"
+            tagStyle="text-cream"
+            titleStyle="text-light-gray "
+            lineStyle="bg-cream"
+          />
+          <Button>See more projects</Button>
+        </div>
+        <div className="grid grid-cols-8 mt-16 gap-5">
+          <a href="" className="col-span-4">
+            {/* card */}
+            <ProjectsCard />
+          </a>
+          <a href="" className="col-span-4">
+            {/* card */}
+            <ProjectsCard />
+          </a>
+          <a href="" className="col-span-4">
+            {/* card */}
+            <ProjectsCard />
+          </a>
+          <a href="" className="col-span-4">
+            {/* card */}
+            <ProjectsCard />
+          </a>
+        </div>
+      </section>
+      <section className="section-padding">
+        <div className="flex items-center justify-between mb-16">
+          <Heading2
+            title="Stay within the loop, see our latest updates and news"
+            tag="insights"
+            tagStyle="text-cream"
+            titleStyle="text-light-gray "
+            lineStyle="bg-cream"
+          />
+          <Button>View more insights</Button>
+        </div>
+       <InsightsCardHome />
+       <InsightsCardHome />
+       <InsightsCardHome />
       </section>
     </>
   );
