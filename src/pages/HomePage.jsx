@@ -15,8 +15,8 @@ export default function HomePage() {
       <div className=" relative w-full overflow-hidden rounded-2xl bg-cream">
         <section>
           <div className="relative flex h-screen w-full items-center justify-center overflow-hidden">
-            <h2 className="max-w-lg px-10 text-center font-satoshi text-3xl font-extrabold text-bright-brown">
-              we are a dedicated team that makes your brand stand out.
+            <h2 className="max-w-lg px-10 z-10 text-center text-bright-brown">
+              We are a dedicated team that makes your brand stand out.
             </h2>
             <img
               width="100px"
@@ -50,37 +50,41 @@ export default function HomePage() {
         </section>
 
         <section className="section-padding">
-          <div className="grid grid-cols-12 gap-x-16 ">
+          <div className="grid lg:grid-cols-12 gap-y-8">
             {/* Extract this heading 2 as a component */}
             <Heading2
               tag="about us"
               title="We believe in the power of simplicity and impeccable design"
             />
-            <p className="col-span-3 text-base font-medium text-brown">
+            <div className="flex flex-col gap-y-5 md:flex-row gap-x-12 col-span-6">
+
+            <p className=" text-base font-medium text-brown">
               Our mission is to create remarkable digital experiences that
               inspire and resonate with our clients and their audiences. With a
               relentless pursuit of excellence, we combine creativity,
               innovation, and technical expertise to deliver tailored solutions
               that drive tangible results.{" "}
             </p>
-            <p className="col-span-3 text-base font-medium text-brown">
+            <p className=" text-base font-medium text-brown">
               We are dedicated to transforming ideas into impactful realities,
               leaving a lasting impression in the digital landscape. Trust us to
               bring your vision to life with our passion for minimalistic design
               and uncompromising attention to detail.
             </p>
+            </div>
           </div>
         </section>
 
-        <section className="section-padding grid grid-cols-1 lg:grid-cols-6">
-          <div className="col-span-2 flex flex-row lg:flex-col items-center lg:items-start gap-y-12">
+        <section className="section-padding grid grid-cols-1 lg:grid-cols-6 lg:gap-x-8" >
+          <div className="col-span-2 flex flex-col md:flex-row lg:flex-col md:items-center lg:items-start md:justify-between lg:justify-start gap-y-12">
             <Heading2
               tag="Services"
-              title="From crafting digital presence to driving your success in the digital landscape."
+              title="We drive your success in the digital landscape."
+              titleStyle="max-w-md"
             />
             <Button>View our work</Button>
           </div>
-          <div className="mt-16 lg:mt-0 grid grid-cols-9 gap-x-10 col-span-4">
+          <div className="mt-12 lg:mt-0 grid sm:grid-cols-9 gap-x-7 col-span-4">
             <ServicesCard
               img="/src/assets/images/branding.webp"
               alt="branding"
@@ -114,7 +118,7 @@ export default function HomePage() {
         </section>
       </div>
       <section className="section-padding ">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row lg:flex-col md:items-center lg:items-start md:justify-between lg:justify-start gap-y-12">
           <Heading2
             title="We understand your needs so you can leave your mark and stay ahead of the game"
             tag="our projects"
@@ -124,7 +128,7 @@ export default function HomePage() {
           />
           <Button>See more projects</Button>
         </div>
-        <div className="grid grid-cols-8 mt-16 gap-5">
+        <div className="grid md:grid-cols-8 mt-16 gap-5">
           <a href="" className="col-span-4">
             {/* card */}
             <ProjectsCard />
@@ -144,7 +148,7 @@ export default function HomePage() {
         </div>
       </section>
       <section className="section-padding">
-        <div className="flex items-center justify-between mb-16">
+        <div className="flex flex-col md:flex-row lg:flex-col md:items-center lg:items-start md:justify-between lg:justify-start gap-y-12 mb-16">
           <Heading2
             title="Stay within the loop, see our latest updates and news"
             tag="insights"

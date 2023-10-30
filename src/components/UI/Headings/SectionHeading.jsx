@@ -26,7 +26,7 @@ export default function Heading2({
         </p>
         <h2
           className={twMerge(
-            "max-w-xl text-2xl  font-extrabold text-bright-brown",
+            "max-w-xl text-bright-brown",
             titleStyle
           )}
         >

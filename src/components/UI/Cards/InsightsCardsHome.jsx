@@ -2,9 +2,9 @@ export default function InsightsCardHome() {
   return (
     <a
       href=""
-      className="flex items-center px-10 py-8 border-t border-dark-gray gap-x-8"
+      className="flex flex-col md:flex-row items-center px-2 md:px-5 lg:px-10 py-8 border-t border-dark-gray gap-x-8 w-full"
     >
-      <div className="overflow-hidden aspect-square lg:aspect-video w-1/2">
+      <div className="overflow-hidden mb-8 md:aspect-video rounded-lg lg:aspect-video  lg:w-1/2">
         <img
           width={500}
           height={400}
@@ -13,12 +13,12 @@ export default function InsightsCardHome() {
           alt=""
         />
       </div>
-      <div className="w-1/2">
-        <span className="text-base text-cream pb-1">July 15, 2023</span>
-        <h3 className="text-white font-bold text-xl">
+      <div className="lg:w-1/2">
+        <span className="text-base text-cream font-medium">July 15, 2023</span>
+        <h3 className="text-white pt-1">
           Design Conference Takeaways: Unleashing Creativity and Collaboration
         </h3>
-        <p className="mt-3 text-base text-dark-gray font-medium">
+        <p className="mt-3 text-dark-gray">
           Dive into our exclusive coverage of the latest design conference,
           where industry leaders and visionaries came together to share
           groundbreaking ideas and foster innovation.

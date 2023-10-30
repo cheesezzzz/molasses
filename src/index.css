@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 @layer base {
   * {
@@ -44,9 +42,20 @@
   }
 }
 
+@layer base {
+  p {
+    @apply text-base font-medium;
+  }
+  h2 {
+    @apply text-xl lg:text-2xl font-satoshi font-extrabold;
+  }
+  h3 {
+    @apply text-lg font-extrabold;
+  }
+}
 
 @layer utilities {
   .section-padding {
-    @apply px-[5%] md:px-[3%] pt-10 md:pt-[8%]
+    @apply px-[5%] md:px-[3%] pt-20 md:pt-[8%];
   }
 }

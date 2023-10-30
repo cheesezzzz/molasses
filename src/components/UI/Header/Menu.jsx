@@ -95,14 +95,14 @@ export default function Menu({ toggleMenu }) {
           />
         </svg>
 
-        <nav className="flex flex-col justify-center gap-y-4 px-14 pt-40 text-4xl font-bold text-cream">
+        <nav className="flex flex-col justify-center gap-y-2 px-14 pt-24 text-4xl font-bold text-cream">
           {links.map((link, index) => {
             return (
               <div
                 key={index}
                 className="group flex w-fit cursor-pointer items-center gap-x-4"
               >
-                <span className="invisible inline-block h-3 w-3 rounded-full bg-cream opacity-0 transition-all group-hover:visible group-hover:opacity-100"></span>
+                <span className="invisible inline-block h-3 w-3 rounded-full bg-cream opacity-0 scale-0 transition-all group-hover:visible group-hover:opacity-100 group-hover:scale-100 ease-in-out duration-200"></span>
                 <motion.a
                   className="w-fit"
                   custom={index}

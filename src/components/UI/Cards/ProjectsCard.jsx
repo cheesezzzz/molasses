@@ -6,10 +6,10 @@ export default function ProjectsCard() {
           src="https://images.unsplash.com/photo-1697525994215-0fadc6c2c593?auto=format&fit=crop&q=80&w=2575&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
         />
-        <div className="absolute z-20 bottom-0 bg-cream w-full flex px-5 py-3 justify-between rounded-t-lg">
+        <div className="absolute z-20 bottom-0 bg-cream w-full flex px-5 py-5 justify-between rounded-t-xl">
           <div className=" text-bright-brown">
-            <span className="text-base">Branding</span>
-            <h3 className="font-bold text-lg">NIKE</h3>
+            <span className="text-base font-medium">Branding</span>
+            <h3>NIKE</h3>
           </div>
           <button className="px-4 py-1 bg-white rounded-full flex text-bright-brown font-bold gap-x-3 items-center">
             <span>View Case Study</span>

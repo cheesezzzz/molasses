@@ -34,7 +34,7 @@ export default function NavBar() {
       padding: "0rem",
     },
     animate: {
-      backgroundColor: "rgba(24, 24, 24, 0.4)",
+      backgroundColor: "rgba(24, 24, 24, 0.3)",
       backdropFilter: "blur(64px)",
       paddingTop: "0.5rem",
       paddingBottom: "0.5rem",
@@ -45,7 +45,7 @@ export default function NavBar() {
 
   return (
     <div>
-      <header className=" fixed left-1/2 top-2 z-50 w-full -translate-x-1/2 rounded-xl ">
+      <header className=" fixed left-1/2 top-0 z-50 w-full -translate-x-1/2 rounded-xl ">
         <div className=" px-[5%] md:px-[2%] w-full py-3 ">
           {/* Handling the navBar change logic */}
           <motion.nav
@@ -57,7 +57,7 @@ export default function NavBar() {
             {/* menu nav button */}
             <button
               onClick={toggleMenu}
-              className="bg-accent font-denton group relative  z-[60] flex h-14 w-14 items-center justify-center justify-self-start overflow-hidden rounded-full bg-cream px-5 text-sm"
+              className="bg-accent font-denton group relative  z-[60] flex h-14 w-14 items-center justify-center justify-self-start overflow-hidden rounded-full bg-cream px-5 text-sm font-medium"
             >
               <motion.span
                 variants={opacity}
@@ -97,9 +97,9 @@ export default function NavBar() {
             </div>
 
             {/* CTA */}
-            <div className="justify-self-end text-base">
+            <div className="justify-self-end lg:text-base">
               <a
-                className="font-denton group relative flex flex-col rounded-full bg-cream px-8 py-3 text-black"
+                className="font-denton group relative flex flex-col rounded-full bg-cream px-5 lg:px-8 py-3 text-black"
                 href=""
               >
                 <span className="font-medium text-brown transition-all duration-300 ease-out group-hover:-translate-y-2 group-hover:opacity-0">

@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 export default function Hero() {
@@ -15,8 +15,8 @@ export default function Hero() {
       <motion.div style={{ y, opacity }} className="sticky top-0 ">
         <div className="relative overflow-hidden">
           <div className="section-padding absolute  bottom-1 z-10 py-4 font-satoshi text-white">
-            <div className=" font-medium pl-1 text-xl">
-              <p className="mix-blend-exclusion">
+            <div className=" font-medium pl-1 text-md">
+              <p className="mix-blend-exclusion text-md md:text-lg lg:text-xl ">
                 A creative web & branding agency
               </p>
             </div>
